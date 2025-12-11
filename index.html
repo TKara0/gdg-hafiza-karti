@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hafıza Kartı Oyunu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- İsim Giriş Modalı -->
+    <div id="name-input-modal" class="modal">
+        <div class="modal-content">
+            <h2>Oyuncu Adlarını Girin</h2>
+            <div class="name-input-group">
+                <div class="player-input">
+                    <label for="player1-name">Oyuncu 1 - Ad Soyad</label>
+                    <input type="text" id="player1-name" placeholder="Ad Soyad girin" />
+                </div>
+                <div class="player-input">
+                    <label for="player2-name">Oyuncu 2 - Ad Soyad</label>
+                    <input type="text" id="player2-name" placeholder="Ad Soyad girin" />
+                </div>
+            </div>
+            <button id="start-game-btn">Oyunu Başlat</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1>GDG Hafıza Kartı Oyunu</h1>
+            <div class="scoreboard">
+                <div id="player1-score" class="player-score active">
+                    <span class="player-name">Oyuncu 1</span>
+                    <span class="score">0</span>
+                    <div class="timer-bar"></div>
+                </div>
+                <div id="player2-score" class="player-score">
+                    <span class="player-name">Oyuncu 2</span>
+                    <span class="score">0</span>
+                    <div class="timer-bar"></div>
+                </div>
+            </div>
+        </header>
+
+        <div class="game-board" id="game-board">
+            <!-- Kartlar JavaScript ile buraya eklenecek -->
+        </div>
+    </div>
+
+    <!-- Oyun Sonu Modalı -->
+    <div id="game-over-modal" class="modal">
+        <div class="modal-content">
+            <h2 id="winner-message">Tebrikler!</h2>
+            <p id="final-scores"></p>
+            <button id="restart-btn">Yeni Oyna</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
